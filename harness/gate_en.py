@@ -9,6 +9,7 @@ import io
 import os
 import re
 import sys
+import tempfile
 import unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -37,8 +38,21 @@ QUOTE_CHARS = (DQUOTE + CURLY_OPEN + CURLY_CLOSE + GUILL_OPEN + GUILL_CLOSE
 
 
 def read_lines(path):
-    with io.open(path, encoding="utf-8", newline="") as fh:
+    with io.open(path, encoding="utf-8", newline=None) as fh:
         return fh.read().split("\n")
+
+def crlf_read_roundtrip(lines):
+    fd, path = tempfile.mkstemp(prefix="crown-crlf-", suffix=".md")
+    try:
+        with os.fdopen(fd, "wb") as fh:
+            fh.write("\r\n".join(lines).encode("utf-8"))
+        return read_lines(path) == lines
+    finally:
+        try:
+            os.unlink(path)
+        except OSError:
+            pass
+
 
 
 def check(name, ok, detail=""):
@@ -497,6 +511,12 @@ def run_teeth(lines):
         print("teeth aborted: the battery needs a green baseline")
         return 1
     missing, unknown = registry_errors(base, TEETH)
+
+    if not crlf_read_roundtrip(lines):
+        print("FAIL CRLF_CHECKOUT_TRANSPORT -> carriage returns survived decoding")
+        return 1
+    print("ok   SURVIVE  %-38s" % "CRLF checkout transport")
+
     if missing or unknown:
         print("FAIL registry -> missing=%s unknown=%s" % (missing, unknown))
         return 1
