@@ -1,0 +1,12 @@
+# Auto-generated Python bytecode cache (created by running the harness — NOT source)
+__pycache__/
+*.pyc
+*.pyo
+# pytest cache
+.pytest_cache/
+# OS cruft
+.DS_Store
+Thumbs.db
+# local-only working dirs — not part of the published bundle
+_safety-net/
+_notes/
