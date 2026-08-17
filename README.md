@@ -10,7 +10,7 @@
 [![NC2.5 anchor](https://img.shields.io/badge/NC2.5%20v2.1-10.17605%2FOSF.IO%2FNHTC5-0969da)](https://doi.org/10.17605/OSF.IO/NHTC5)
 
 <p align="center">
-  <img src="docs/architecture.svg" alt="Diagram: Operator Zero projects through a forming field into the Unit; each line's crown is a front of retained continuations, not a summit; metamorphosis of a nested lower substrate narrows the admissible continuations of its upper substrate while the upper's own cost stays positive." width="720">
+  <img src="https://cdn.jsdelivr.net/gh/petronushowcore-mx/Architectural-Evolution-with-Navigational-Cybernetics-Part-One-The-Crown@main/docs/architecture.svg" alt="Diagram: Operator Zero projects through a forming field into the Unit; each line's crown is a front of retained continuations, not a summit; metamorphosis of a nested lower substrate narrows the admissible continuations of its upper substrate while the upper's own cost stays positive." width="720">
 </p>
 
 *The diagram cycles through four views — Operator Zero, the forming field 0&#8594;1, the Unit and its crown, and a nested substrate whose metamorphosis narrows the continuations of the level above it (§2, §3, §6, §10–11).*
