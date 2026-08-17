@@ -20,7 +20,7 @@ This repository contains the canonical English manuscript of *Architectural Evol
 > **Status (read first).** The manuscript is an architectural essay and operator specification. The harness checks the public manuscript's structure, mathematical delimiter discipline, declared textual bindings, and selected corpus-hygiene invariants. Its mutation battery demonstrates that each included check rejects its targeted change. The harness does not verify cited works, establish empirical claims, replace mathematical reading, or turn the essay into a proof-assistant formalisation.
 
 **Author:** Maksim Barziankou (MxBv) — [LinkedIn](https://www.linkedin.com/in/maxbarzenkov)  
-**Affiliation:** The Urgrund Laboratory  
+**Affiliation:** The Urgrund Laboratheory  
 **Website:** https://petronus.eu  
 **License:** CC BY-NC-ND 4.0  
 **Work DOI:** 10.17605/OSF.IO/ZYBT7  
@@ -68,7 +68,7 @@ Every command exits non-zero on failure. The normal run checks display and inlin
 
 ## How to cite
 
-> Barziankou, M. (2026). *Architectural Evolution with Navigational Cybernetics. Part One — The Crown*. Navigational Cybernetics 2.5 corpus, The Urgrund Laboratory. DOI: [10.17605/OSF.IO/ZYBT7](https://doi.org/10.17605/OSF.IO/ZYBT7)
+> Barziankou, M. (2026). *Architectural Evolution with Navigational Cybernetics. Part One — The Crown*. Navigational Cybernetics 2.5 corpus, The Urgrund Laboratheory. DOI: [10.17605/OSF.IO/ZYBT7](https://doi.org/10.17605/OSF.IO/ZYBT7)
 
 ```bibtex
 @misc{barziankou2026crown,
@@ -76,7 +76,7 @@ Every command exits non-zero on failure. The normal run checks display and inlin
   title  = {Architectural Evolution with Navigational Cybernetics. Part One --- The Crown},
   year   = {2026},
   doi    = {10.17605/OSF.IO/ZYBT7},
-  note   = {Navigational Cybernetics 2.5 corpus. The Urgrund Laboratory. License CC BY-NC-ND 4.0.}
+  note   = {Navigational Cybernetics 2.5 corpus. The Urgrund Laboratheory. License CC BY-NC-ND 4.0.}
 }
 ```
 
