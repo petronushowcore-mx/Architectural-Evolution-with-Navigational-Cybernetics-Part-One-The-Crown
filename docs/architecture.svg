@@ -1,0 +1,226 @@
+<svg viewBox="0 0 960 420" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="crown-diagram-title crown-diagram-desc">
+  <title id="crown-diagram-title">Architecture of the Crown</title>
+  <desc id="crown-diagram-desc">
+    Operator Zero projects through a forming field into the Unit; each line's crown is a
+    front of retained continuations, not a summit; metamorphosis of a nested lower substrate
+    narrows the admissible continuations of its upper substrate while the upper's own cost
+    stays positive.
+  </desc>
+
+  <defs>
+    <radialGradient id="glowGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e0ac5c" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#e0ac5c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowViolet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a48ce8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#a48ce8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pillFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a48ce8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#a48ce8" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0c179"/>
+      <stop offset="100%" stop-color="#c98f45"/>
+    </linearGradient>
+    <filter id="softBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <clipPath id="clipStack">
+      <rect x="716" y="103" width="203" height="168" rx="10"/>
+    </clipPath>
+
+    <path id="f1" d="M126,196 C200,148 300,148 350,192"/>
+    <path id="f2" d="M126,205 C200,182 300,182 350,203"/>
+    <path id="f3" d="M126,215 C210,215 290,215 350,215"/>
+    <path id="f4" d="M126,225 C200,248 300,248 350,227"/>
+    <path id="f5" d="M126,234 C200,282 300,282 350,238"/>
+    <path id="c1" d="M430,203 C480,175 520,150 535,117"/>
+    <path id="c2" d="M430,215 L535,215"/>
+    <path id="c3" d="M430,227 C480,255 520,285 535,313"/>
+  </defs>
+
+  <style>
+    <![CDATA[
+      text { font-family: Arial, Helvetica, sans-serif; fill: #eef0f4; }
+      .kicker     { font-size: 11px; letter-spacing: 2px; fill: #6b7386; }
+      .label-main { font-size: 15px; font-weight: 700; }
+      .label-sub  { font-size: 11px; fill: #8891a3; }
+      .pill-label { font-size: 11px; font-weight: 700; fill: #d9cbfa; letter-spacing: .2px; }
+      .nest-label { font-size: 9px; font-weight: 700; fill: #8fd4ea; letter-spacing: .3px; }
+      .tiny       { font-size: 9px;  fill: #8891a3; }
+      .caption    { font-size: 13px; fill: #9aa2b3; }
+
+      .pulse { transform-box: fill-box; transform-origin: center; }
+      @keyframes pulseBreath {
+        0%   { opacity: 0.26; transform: scale(0.92); }
+        50%  { opacity: 0.55; transform: scale(1.08); }
+        100% { opacity: 0.26; transform: scale(0.92); }
+      }
+      .pulse-1 { animation: pulseBreath 4.2s ease-in-out infinite; }
+      .pulse-2 { animation: pulseBreath 4.6s ease-in-out infinite; animation-delay: .6s; }
+
+      .spin-ring { animation: dashSpin 6s linear infinite; }
+      @keyframes dashSpin { to { stroke-dashoffset: -288; } }
+
+      /* shell layers: each drifts sideways on its own, independent of the rest */
+      .shift { transform-box: fill-box; transform-origin: center; }
+      @keyframes driftX { 0% { transform: translateX(-4px); } 50% { transform: translateX(4px); } 100% { transform: translateX(-4px); } }
+      .shift-1 { animation: driftX 6.0s ease-in-out infinite; }
+      .shift-2 { animation: driftX 7.0s ease-in-out infinite; animation-delay: .5s; }
+      .shift-3 { animation: driftX 6.5s ease-in-out infinite; animation-delay: 1s; }
+      .shift-4 { animation: driftX 7.5s ease-in-out infinite; animation-delay: 1.5s; }
+
+      /* each shell layer's name is replaced by the next, one layer at a time, never in sync */
+      @keyframes shellA { 0%,45% { opacity: 1; } 50%,95% { opacity: .08; } 100% { opacity: 1; } }
+      @keyframes shellB { 0%,45% { opacity: .08; } 50%,95% { opacity: 1; } 100% { opacity: .08; } }
+      .shell-a-1 { animation: shellA 6s ease-in-out infinite; }
+      .shell-b-1 { animation: shellB 6s ease-in-out infinite; }
+      .shell-a-2 { animation: shellA 6s ease-in-out infinite; animation-delay: 1.5s; }
+      .shell-b-2 { animation: shellB 6s ease-in-out infinite; animation-delay: 1.5s; }
+      .shell-a-3 { animation: shellA 6s ease-in-out infinite; animation-delay: 3s; }
+      .shell-b-3 { animation: shellB 6s ease-in-out infinite; animation-delay: 3s; }
+      .shell-a-4 { animation: shellA 6s ease-in-out infinite; animation-delay: 4.5s; }
+      .shell-b-4 { animation: shellB 6s ease-in-out infinite; animation-delay: 4.5s; }
+
+      /* the structural diagram (nodes, lines, labels, panels) never depends on
+         any of the above — motion is a bonus layer drawn on top of a complete scene.
+         the floor carries no animation class at all: it is the one thing here that never moves. */
+      @media (prefers-reduced-motion: reduce) {
+        .pulse-1, .pulse-2, .spin-ring { animation: none; opacity: .45; }
+        .shift-1, .shift-2, .shift-3, .shift-4 { animation: none; }
+        .shell-a-1, .shell-a-2, .shell-a-3, .shell-a-4 { animation: none; opacity: 1; }
+        .shell-b-1, .shell-b-2, .shell-b-3, .shell-b-4 { animation: none; opacity: 0; }
+        .rm-hide { display: none; }
+      }
+    ]]>
+  </style>
+
+  <rect x="1" y="1" width="958" height="418" rx="20" fill="#0a0d14" stroke="#1e2532" stroke-width="2"/>
+  <text x="24" y="30" class="kicker">NC2.5 · ARCHITECTURAL EVOLUTION — THE CROWN</text>
+
+  <!-- Zone 1 — Will, Operator Zero -->
+  <g id="zone-will">
+    <circle class="pulse pulse-1" cx="100" cy="215" r="50" fill="url(#glowGold)" filter="url(#softBlur)"/>
+    <circle cx="100" cy="215" r="24" fill="#141a24" stroke="#e0ac5c" stroke-width="2.4"/>
+    <circle cx="100" cy="215" r="4" fill="#f3d9a8"/>
+    <text x="100" y="268" text-anchor="middle" class="label-main">WILL</text>
+    <text x="100" y="284" text-anchor="middle" class="label-sub">OPERATOR ZERO (0_W)</text>
+  </g>
+
+  <!-- Zone 2 — the forming field, streaming toward the Unit -->
+  <g id="zone-field">
+    <use href="#f1" fill="none" stroke="#5fc1e0" stroke-width="1.4" opacity="0.28"/>
+    <use href="#f2" fill="none" stroke="#5fc1e0" stroke-width="1.4" opacity="0.4"/>
+    <use href="#f3" fill="none" stroke="#5fc1e0" stroke-width="1.6" opacity="0.5"/>
+    <use href="#f4" fill="none" stroke="#5fc1e0" stroke-width="1.4" opacity="0.4"/>
+    <use href="#f5" fill="none" stroke="#5fc1e0" stroke-width="1.4" opacity="0.28"/>
+
+    <circle class="rm-hide" r="2.6" fill="#bfe9f7"><animateMotion dur="2.4s" begin="0s"   repeatCount="indefinite"><mpath href="#f1"/></animateMotion></circle>
+    <circle class="rm-hide" r="2.6" fill="#bfe9f7"><animateMotion dur="2.6s" begin="0.45s" repeatCount="indefinite"><mpath href="#f2"/></animateMotion></circle>
+    <circle class="rm-hide" r="2.8" fill="#d8f4fb"><animateMotion dur="2.2s" begin="0.9s"  repeatCount="indefinite"><mpath href="#f3"/></animateMotion></circle>
+    <circle class="rm-hide" r="2.6" fill="#bfe9f7"><animateMotion dur="2.6s" begin="1.35s" repeatCount="indefinite"><mpath href="#f4"/></animateMotion></circle>
+    <circle class="rm-hide" r="2.6" fill="#bfe9f7"><animateMotion dur="2.4s" begin="1.8s"  repeatCount="indefinite"><mpath href="#f5"/></animateMotion></circle>
+
+    <text x="238" y="332" text-anchor="middle" class="label-main">FIELD (0 → 1)</text>
+    <text x="238" y="348" text-anchor="middle" class="label-sub">FORMS THE I</text>
+  </g>
+
+  <!-- the atmosphere is not incidental — it is generated by the floor of zone 4
+       and thins as it rises and spreads away from it, over everything above -->
+  <ellipse cx="740" cy="260" rx="260" ry="190" fill="url(#glowGold)" filter="url(#softBlur)" opacity="0.10"/>
+
+  <!-- Zone 3 — the Unit and its crowns -->
+  <g id="zone-crown">
+    <circle class="pulse pulse-2" cx="380" cy="215" r="58" fill="url(#glowViolet)" filter="url(#softBlur)"/>
+    <circle class="spin-ring" cx="380" cy="215" r="46" fill="none" stroke="#a48ce8" stroke-width="2" stroke-dasharray="3 9"/>
+    <circle cx="380" cy="215" r="28" fill="#141a24" stroke="#a48ce8" stroke-width="2.4"/>
+    <circle cx="380" cy="215" r="4" fill="#d9cbfa"/>
+    <text x="380" y="268" text-anchor="middle" class="label-main">THE UNIT</text>
+    <text x="380" y="284" text-anchor="middle" class="label-sub">IDENTITY PROJECTION</text>
+
+    <use href="#c1" fill="none" stroke="#a48ce8" stroke-width="1.6" opacity="0.55"/>
+    <use href="#c2" fill="none" stroke="#a48ce8" stroke-width="1.6" opacity="0.55"/>
+    <use href="#c3" fill="none" stroke="#a48ce8" stroke-width="1.6" opacity="0.55"/>
+
+    <circle class="rm-hide" r="2.8" fill="#d9cbfa"><animateMotion dur="3.0s" begin="0s"   repeatCount="indefinite"><mpath href="#c1"/></animateMotion></circle>
+    <circle class="rm-hide" r="2.8" fill="#d9cbfa"><animateMotion dur="3.0s" begin="0.6s" repeatCount="indefinite"><mpath href="#c2"/></animateMotion></circle>
+    <circle class="rm-hide" r="2.8" fill="#d9cbfa"><animateMotion dur="3.0s" begin="1.2s" repeatCount="indefinite"><mpath href="#c3"/></animateMotion></circle>
+
+    <!-- shared atmosphere: the crowns are not three isolated branches, but one field,
+         rooted in the same substrate as the floor of zone 4 -->
+    <ellipse cx="607" cy="215" rx="92" ry="130" fill="url(#glowGold)" filter="url(#softBlur)" opacity="0.22"/>
+
+    <!-- the field of admissibility: everything nested inside it is closed under NC2.5 -->
+    <text x="607" y="72" text-anchor="middle" font-size="10" font-weight="700" letter-spacing=".3px" fill="#e0ac5c">NC2.5 — FIELD OF ADMISSIBILITY</text>
+    <rect x="520" y="82" width="174" height="266" rx="20" fill="none" stroke="#e0ac5c" stroke-width="1.6" stroke-dasharray="6 5" opacity="0.55"/>
+
+    <!-- each crown nests inside the habitat-system it actually lives in -->
+    <rect x="535" y="90"  width="145" height="54" rx="14" fill="#5fc1e0" fill-opacity="0.08" stroke="#5fc1e0" stroke-width="1.4"/>
+    <text x="548" y="103" class="nest-label">System"Sea"</text>
+    <rect x="555" y="112" width="105" height="26" rx="13" fill="url(#pillFill)" stroke="#a48ce8" stroke-width="1.6"/>
+    <text x="607" y="129" text-anchor="middle" class="pill-label">System"Whale"</text>
+
+    <rect x="535" y="188" width="145" height="54" rx="14" fill="#5fc1e0" fill-opacity="0.08" stroke="#5fc1e0" stroke-width="1.4"/>
+    <text x="548" y="201" class="nest-label">System"Land"</text>
+    <rect x="555" y="210" width="105" height="26" rx="13" fill="url(#pillFill)" stroke="#a48ce8" stroke-width="1.6"/>
+    <text x="607" y="227" text-anchor="middle" class="pill-label">System"Rat"</text>
+
+    <rect x="535" y="286" width="145" height="54" rx="14" fill="#5fc1e0" fill-opacity="0.08" stroke="#5fc1e0" stroke-width="1.4"/>
+    <text x="548" y="299" class="nest-label">System"Air"</text>
+    <rect x="555" y="308" width="105" height="26" rx="13" fill="url(#pillFill)" stroke="#a48ce8" stroke-width="1.6"/>
+    <text x="607" y="325" text-anchor="middle" class="pill-label">System"Beetle"</text>
+
+    <!-- habitats connected to each other, not just each to the Unit -->
+    <line x1="680" y1="144" x2="680" y2="188" stroke="#5fc1e0" stroke-width="1.4" stroke-dasharray="3 5" opacity="0.5"/>
+    <line x1="680" y1="242" x2="680" y2="286" stroke="#5fc1e0" stroke-width="1.4" stroke-dasharray="3 5" opacity="0.5"/>
+
+    <!-- and the creatures within them, connected to each other too -->
+    <line x1="555" y1="138" x2="555" y2="210" stroke="#a48ce8" stroke-width="1.3" stroke-dasharray="3 5" opacity="0.5"/>
+    <line x1="555" y1="236" x2="555" y2="308" stroke="#a48ce8" stroke-width="1.3" stroke-dasharray="3 5" opacity="0.5"/>
+  </g>
+
+  <!-- the flow's identities all stand on the same ground, underneath -->
+  <line x1="680" y1="215" x2="700" y2="215" stroke="#e0ac5c" stroke-width="2" stroke-dasharray="5,4" opacity="0.6"/>
+
+  <!-- Zone 4 — shells are replaced in turn; Operator Zero is the floor beneath them -->
+  <g id="zone-nested">
+    <rect x="700" y="65" width="235" height="300" rx="20" fill="#10141d" stroke="#e0ac5c" stroke-width="2"/>
+    <ellipse cx="817" cy="290" rx="140" ry="210" fill="url(#glowGold)" filter="url(#softBlur)" opacity="0.14"/>
+    <text x="817" y="88" text-anchor="middle" class="label-sub" font-weight="700">SHELLS — REPLACED IN TURN</text>
+
+    <!-- one monolith, not four separate blocks: the layers touch, only their colour tells them apart -->
+    <g clip-path="url(#clipStack)">
+      <rect class="shift shift-1" x="710" y="103" width="215" height="42" fill="#5fc1e0" fill-opacity="0.5"/>
+      <rect class="shift shift-2" x="710" y="145" width="215" height="42" fill="#a48ce8" fill-opacity="0.5"/>
+      <rect class="shift shift-3" x="710" y="187" width="215" height="42" fill="#5fcbb0" fill-opacity="0.5"/>
+      <rect class="shift shift-4" x="710" y="229" width="215" height="42" fill="#7c93c9" fill-opacity="0.5"/>
+    </g>
+    <rect x="716" y="103" width="203" height="168" rx="10" fill="none" stroke="#333c4d" stroke-width="1.4"/>
+    <line x1="720" y1="145" x2="915" y2="145" stroke="#0a0d14" stroke-width="1.4" opacity="0.55"/>
+    <line x1="720" y1="187" x2="915" y2="187" stroke="#0a0d14" stroke-width="1.4" opacity="0.55"/>
+    <line x1="720" y1="229" x2="915" y2="229" stroke="#0a0d14" stroke-width="1.4" opacity="0.55"/>
+
+    <text x="817" y="126" text-anchor="middle" class="pill-label shell-a-1">PHYSICAL</text>
+    <text x="817" y="126" text-anchor="middle" class="pill-label shell-b-1">PHYSICO-CHEMICAL</text>
+    <text x="817" y="168" text-anchor="middle" class="pill-label shell-a-2">BIOLOGICAL</text>
+    <text x="817" y="168" text-anchor="middle" class="pill-label shell-b-2">ORGANISM</text>
+    <text x="817" y="210" text-anchor="middle" class="pill-label shell-a-3">SPECIES</text>
+    <text x="817" y="210" text-anchor="middle" class="pill-label shell-b-3">ECOSYSTEM</text>
+    <text x="817" y="252" text-anchor="middle" class="pill-label shell-a-4">PLANET</text>
+    <text x="817" y="252" text-anchor="middle" class="pill-label shell-b-4">OBSERVER</text>
+
+    <!-- the floor: no shift class — the one thing here that does not move,
+         and the visible source of the glow that fills the whole basin above it -->
+    <ellipse cx="817" cy="303" rx="130" ry="50" fill="url(#glowGold)" filter="url(#softBlur)" opacity="0.6"/>
+    <rect x="716" y="279" width="203" height="48" rx="18" fill="url(#floorGrad)"/>
+    <text x="817" y="308" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1206">OPERATOR ZERO</text>
+    <text x="817" y="343" text-anchor="middle" class="tiny">INVARIANT UNDER EVERY STRIPPING OF SHELLS</text>
+  </g>
+
+  <line x1="24" y1="372" x2="936" y2="372" stroke="#1e2532" stroke-width="1"/>
+  <text x="480" y="392" text-anchor="middle" class="caption">Each system keeps working by its own familiar rules —</text>
+  <text x="480" y="408" text-anchor="middle" class="caption">without this ground, none of them could mean anything at all.</text>
+</svg>

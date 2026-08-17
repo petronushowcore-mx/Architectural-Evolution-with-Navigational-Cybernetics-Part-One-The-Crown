@@ -9,6 +9,12 @@
 [![Mutation battery](https://img.shields.io/badge/mutations-17%2F17-e36209)](#verification-harness)
 [![NC2.5 anchor](https://img.shields.io/badge/NC2.5%20v2.1-10.17605%2FOSF.IO%2FNHTC5-0969da)](https://doi.org/10.17605/OSF.IO/NHTC5)
 
+<p align="center">
+  <img src="docs/architecture.svg" alt="Diagram: Operator Zero projects through a forming field into the Unit; each line's crown is a front of retained continuations, not a summit; metamorphosis of a nested lower substrate narrows the admissible continuations of its upper substrate while the upper's own cost stays positive." width="720">
+</p>
+
+*The diagram cycles through four views — Operator Zero, the forming field 0&#8594;1, the Unit and its crown, and a nested substrate whose metamorphosis narrows the continuations of the level above it (§2, §3, §6, §10–11).*
+
 This repository contains the canonical English manuscript of *Architectural Evolution with Navigational Cybernetics. Part One — The Crown* together with its executable structural verification harness, as one citable work in the NC2.5 (Navigational Cybernetics 2.5) corpus.
 
 > **Status (read first).** The manuscript is an architectural essay and operator specification. The harness checks the public manuscript's structure, mathematical delimiter discipline, declared textual bindings, and selected corpus-hygiene invariants. Its mutation battery demonstrates that each included check rejects its targeted change. The harness does not verify cited works, establish empirical claims, replace mathematical reading, or turn the essay into a proof-assistant formalisation.

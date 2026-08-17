@@ -10,6 +10,7 @@ Inventory of every source document and runnable harness module in this repositor
 | `README.md` | orientation, status, citation, and run instructions |
 | `LICENSE` | repository-wide CC BY-NC-ND 4.0 notice |
 | `MANIFEST.md` | this inventory |
+| `docs/architecture.svg` | non-normative visual aid for `README.md`; not part of the citable manuscript |
 
 ## Harness
 
